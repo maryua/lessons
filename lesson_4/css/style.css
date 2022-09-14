@@ -1,0 +1,111 @@
+* {
+	color: black;
+}
+
+body {
+	font-family: "Lato";
+}
+
+h1 {
+	font-family: "Lato";
+	font-weight: 900;
+	font-size: large;
+	color: mediumblue;
+}
+
+#anchor1,
+#anchor2,
+#anchor3,
+#anchor4,
+#anchor5 {
+	color:blueviolet;
+}
+
+p.text {
+	color: midnightblue;
+}
+
+.sub-title.small {
+	font-family: "Roboto";
+	font-weight: 300;
+	color:coral;
+}
+
+.intro p {
+	font-family: "Larsseit";
+	color:indigo;
+}
+
+.nav .item {
+	color: fuchsia;
+}
+
+.list * {
+	color: greenyellow;
+}
+
+.item span {
+	color: deepskyblue;
+}
+
+figcaption {
+	font-family: "Roboto";
+	font-weight: 500;
+}
+
+.architecture > p {
+	font-family: "Roboto";
+}
+
+.small ~ p {
+	font-family: "Larsseit";
+}
+
+.small + p {
+	color: darkmagenta;
+}
+
+.header {
+}
+.intro {
+}
+.main-title {
+}
+.text {
+}
+.menu-title {
+}
+.nav {
+}
+.item {
+}
+.link {
+}
+.main {
+}
+.name {
+}
+.title {
+	font-weight: 900;
+	font-size: large;
+
+}
+.list {
+}
+.geraldic {
+}
+.history {
+}
+.sub-title {
+	font-weight: 700;
+	color:cornflowerblue;
+}
+.architecture {
+}
+.modern {
+}
+.footer {
+	font-family: "Roboto";
+	font-weight: 500;
+	color: forestgreen;
+}
