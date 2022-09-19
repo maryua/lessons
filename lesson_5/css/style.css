@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&display=swap');
+
+@font-face {
+	font-family: 'DrukCyr';
+	src: url('../fonts/DrukCyr-Medium.woff2') format('woff2'), url('../fonts/DrukCyr-Medium.woff') format('woff');
+	font-display: swap;
+	font-style: normal;
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'DrukCyr';
+	src: url('../fonts/DrukCyr-Heavy.woff2') format('woff2'), url('../fonts/DrukCyr-Heavy.woff') format('woff');
+	font-display: swap;
+	font-style: normal;
+	font-weight: 900;
+}
+
+
+* {
+	color: black;
+}
+
+body {
+	font-family: 'Spectral', serif;
+	font-size: 18px;
+	line-height: 1.2;
+	letter-spacing: 0.9;
+}
+
+span {
+	color:deeppink;
+	font-size: 20px;
+	text-decoration: underline;
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+#anchor1,
+#anchor2,
+#anchor3,
+#anchor4 {
+	color:mediumslateblue;
+}
+
+.text.small {
+	display: inline-block;
+}
+
+.text-img p {
+	width: 70%;
+}
+
+.nav .item {
+	font-style: italic;
+	font-size: 20px;
+	color: blueviolet;
+}
+
+.list .item {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.text-img .small {
+	text-indent: 30px;
+}
+
+.text-img + p {
+	font-family: 'DrukCyr', sans-serif;
+	font-size: 20px;
+	letter-spacing: 2px;
+	color: darkmagenta;
+	text-shadow: 2px 2px 5px rgb(105, 104, 104);
+}
+
+.description > p {
+	color:rgb(13, 1, 147);
+	font-size: 20px;
+}
+
+.text.small ~ p {
+	color: darkblue;
+	white-space: nowrap;
+}
+
+.wrapper {
+	padding: 0 15px;
+}
+.header {
+}
+.main-title {
+	font-family: 'DrukCyr', sans-serif;
+	font-weight: 900;
+	font-size: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	color:darkblue;
+	text-shadow: 2px 2px 7px rgb(14, 187, 172);
+	letter-spacing: 5px;
+	margin-bottom: 15px;
+}
+.text-img {
+}
+.text {
+}
+.small {
+	width: 60%;
+	word-spacing: 15px;
+}
+.img {
+	margin: 10px;
+}
+.nav {
+}
+.item {
+}
+.main {
+}
+.description {
+}
+.title {
+	margin-bottom: 20px;
+	font-family: 'DrukCyr', sans-serif;
+	letter-spacing: 3px;
+	font-size: 30px;
+	text-align: center;
+	text-shadow: 2px 2px 5px rgba(109, 108, 108, 0.886);
+}
+.construction {
+}
+.symbolism {
+}
+.list {
+}
+.red {
+	color: red;
+}
+.orange {
+	color: orange;
+}
+.yellow {
+	color: yellow;
+}
+.green {
+	color: green;
+}
+.blue {
+	color: deepskyblue;
+}
+.blue-dark {
+	color:darkblue;
+}
+.violet {
+	color: darkviolet;
+}
+.gallery {
+	text-align: center;
+}
+.footer {
+}
+.link {
+	color: dodgerblue;
+	font-style: italic;
+}
