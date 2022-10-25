@@ -1,0 +1,381 @@
+.wrapper {
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+}
+.main {
+	width: 100%;
+	min-height: 800px;
+	padding: 0 15px;
+	background: url('../img/hills.png') no-repeat left bottom / contain, deepskyblue;
+}
+.cloud {
+}
+.cloud__container-1 {
+	position: absolute;
+	top: 100px;
+	left: 45%;
+	max-width: 300px;
+}
+
+.cloud__container-2 {
+	position: absolute;
+	top: 80px;
+	left: 10%;
+	max-width: 200px;
+}
+.cloud__container-3 {
+	position: absolute;
+	top: 60px;
+	left: 75%;
+	max-width: 150px;
+	perspective: 300px;
+	perspective-origin: 0 0;
+	transition: 1s;
+}
+.cloud__body-1 {
+	width: 300px;
+	height: 100px;
+	background-color: #fff;
+	border-radius: 24% 17% 22% 22% / 50% 50% 50% 50%;
+	box-shadow: 5px 5px 10px gray;
+}
+.cloud__body-1::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -35px;
+	left: 20%;
+	width: 85px;
+	height: 85px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.cloud__body-1::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -60px;
+	left: 45%;
+	width: 120px;
+	height: 120px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.rain {
+	position: relative;
+	top: -10px;
+	left: 20%;
+	max-width: 230px;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.7s;
+}
+.cloud__container-1:hover .rain {
+	visibility: visible;
+	opacity: 1;
+}
+.rain:hover .rain__item {
+	transform-origin: 50% 0;
+	transform: rotate3d(0.5, 0.5, 0.2, -45deg) translate3d(10px, 10px, 5px);
+}
+.rain__item {
+	transition: 1.5s;
+}
+.rain__image {
+	width: 20px;
+	height: 40px;
+}
+.rain__item--1 {
+	position: absolute;
+	top: 20px;
+	left: 0;
+}
+.rain__item--2 {
+	position: absolute;
+	top: 20px;
+	left: 55px;
+}
+.rain__item--3 {
+	position: absolute;
+	top: 20px;
+	left: 110px;
+}
+.rain__item--4 {
+	position: absolute;
+	top: 20px;
+	left: 165px;
+}
+.rain__item--5 {
+	position: absolute;
+	top: 65px;
+	left: 30px;
+}
+.rain__item--6 {
+	position: absolute;
+	top: 65px;
+	left: 85px;
+}
+.rain__item--7 {
+	position: absolute;
+	top: 65px;
+	left: 140px;
+}
+.cloud__container-3:hover .cloud__body-3 {
+	transform: scale3d(1.3, 1.3, 1.7) rotate3d(1, 1, 1, 15deg) translate3d(20px, 20px, 10px);
+}
+.cloud__body-2 {
+	width: 200px;
+	height: 75px;
+	background-color: #fff;
+	border-radius: 24% 17% 22% 22% / 50% 50% 50% 50%;
+	box-shadow: 5px 5px 10px gray;
+	transition: 0.7s;
+}
+.cloud__container-2:hover .cloud__body-2 {
+	transform: skew(5deg, -10deg);
+} 
+.cloud__body-2::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -35px;
+	left: 18%;
+	width: 65px;
+	height: 65px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.cloud__body-2::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -50px;
+	left: 45%;
+	width: 75px;
+	height: 75px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.cloud__body-3 {
+	width: 150px;
+	height: 50px;
+	background-color: #fff;
+	border-radius: 24% 17% 22% 22% / 50% 50% 50% 50%;
+	box-shadow: 5px 5px 10px gray;
+	transition: 0.7s;
+}
+.cloud__body-3::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -20px;
+	left: 20%;
+	width: 40px;
+	height: 40px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.cloud__body-3::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -30px;
+	left: 43%;
+	width: 65px;
+	height: 65px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.sun {
+	position: absolute;
+	top: 40px;
+	left: 25%;
+	display: block;
+	max-width: 200px;
+	max-height: 200px;
+	transition: 1.5s;
+}
+.sun:hover {
+	transform: scale(1.5) rotate(360deg);
+}
+.sun__image {
+	width: 100%;
+}
+.car {
+	position: absolute;
+	top: 425px;
+	left: 15%;
+}
+.car__container {
+	max-width: 400px;
+	max-height: 250px;
+	transition: 0.5s;
+}
+.car__container:hover {
+	transform-origin: 50% 0;
+	transform: translate(70%, 20%) rotate(15deg);
+}
+.car__roof {
+	position: relative;
+	top: 0;
+	left: 55px;
+	width: 200px;
+	height: 90px;
+	border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+	background-color: rgb(76, 39, 238);
+}
+.car__window {
+	width: 75px;
+	height: 60px;
+	border: 1px solid lightgrey;
+}
+.car__window--rear {
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%;
+	background-color: rgb(17, 235, 250);
+}
+
+.car__window--front {
+	position: absolute;
+	top: 15px;
+	left: 105px;
+	border-radius: 0% 100% 100% 0% / 100% 100% 0% 0%;
+	background-color: rgb(17, 235, 250);
+}
+.car__block-window {
+	transform-style: preserve-3d;
+	perspective: 400px;
+	perspective-origin: 40% 60%;
+}
+.car__small-window {
+	position: absolute;
+	top: 23px;
+	left: 133px;
+	width: 45px;
+	height: 51px;
+	border-radius: 0% 100% 100% 0% / 4% 100% 0% 96%;
+	background-color: rgb(57, 139, 247);
+	border: 1px solid lightgrey;
+	/* z-index: 2; */
+}
+.car__small-window--inside {
+	position: absolute;
+	top: 23px;
+	left: 133px;
+	width: 45px;
+	height: 51px;
+	border-radius: 0% 100% 100% 0% / 4% 100% 0% 96%;
+	background-color:rgba(211, 211, 211, 0.803);
+}
+.car__small-window--outside {
+	transition: 0.7s;
+	/* z-index: 2; */
+}
+.car__block-window:hover .car__small-window--outside {
+	transform: rotateY(-45deg);
+}
+.car__block-window:active .car__small-window--outside {
+	transform: rotateY(-135deg);
+	backface-visibility: hidden;
+}
+
+/* Почему при следующей записи псевдоэлемент оказывается над объектом (по оси Z) и никакой z-index не помогает? Пришлось отказаться от ::before и создать блок в html.
+В предыдущих домашках сталкивалась с тем, что псевдокласс приоритетнее просто класса в CSS, сейчас причина в этом? */
+
+/* .car__small-window::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 45px;
+	height: 51px;
+	border-radius: 0% 100% 100% 0% / 4% 100% 0% 96%;
+	background-color:lightgray;
+} */
+.car__body {
+	position: relative;
+	top: -10px;
+	left: 0;
+	width: 325px;
+	height: 90px;
+	border-radius: 18% 25% 10% 10% / 100% 97% 0% 0%;
+	background-color: rgb(76, 39, 238);
+}
+.car__knob {
+	width: 25px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: rgb(126, 15, 191);
+	border: 1px solid black;
+}
+.car__knob--rear {
+	position: absolute;
+	top: 10px;
+	left: 78px;
+}
+.car__knob--front {
+	position: absolute;
+	top: 10px;
+	left: 163px;
+}
+.car__headlight {
+	position: absolute;
+	top: 42px;
+	right: 20px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color:goldenrod;
+}
+.car__bottom {
+	position: relative;
+	top: 0;
+	left: -15px;
+}
+.car__bumper {
+	width: 70px;
+	height: 20px;
+	border-radius: 16% 16% 16% 16% / 50% 50% 50% 50%;
+	background-color: darkorchid;
+}
+.car__bumper--rear {
+	position: absolute;
+	top: -20px;
+	left: 0;
+}
+.car__bumper--front {
+	position: absolute;
+	top: -20px;
+	left: 285px;
+}
+.car__wheel {
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	background-color: rgb(25, 25, 25);
+}
+.car__wheel--rear {
+	position: absolute;
+	top: -45px;
+	left: 50px;
+}
+.wheel {
+}
+.wheel__center {
+	position: absolute;
+	top: 33%;
+	left: 33%;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: gold;
+}
+.car__wheel--front {
+	position: absolute;
+	top: -45px;
+	left: 220px;
+}
