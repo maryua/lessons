@@ -1,0 +1,613 @@
+.wrapper {
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+}
+.main {
+	width: 100%;
+	min-height: 800px;
+	padding: 0 15px;
+	background: url('../img/hills.png') no-repeat left bottom / contain, deepskyblue;
+	animation: sky-color 5s linear 11s 1 forwards;
+}
+@keyframes sky-color {
+	0% {
+		background: url('../img/hills.png') no-repeat left bottom / contain, deepskyblue;
+	}
+	100% {
+		background: url('../img/hills.png') no-repeat left bottom / contain, rgb(2, 0, 93);
+	}
+}
+.cloud {
+}
+.cloud__container-1 {
+	position: absolute;
+	top: 100px;
+	left: 45%;
+	max-width: 300px;
+}
+
+.cloud__container-2 {
+	position: absolute;
+	top: 80px;
+	left: 10%;
+	max-width: 200px;
+}
+.cloud__container-3 {
+	position: absolute;
+	top: 60px;
+	left: 75%;
+	max-width: 150px;
+	perspective: 300px;
+	perspective-origin: 0 0;
+	transition: 1s;
+}
+.cloud__body-1 {
+	width: 300px;
+	height: 100px;
+	background-color: #fff;
+	border-radius: 24% 17% 22% 22% / 50% 50% 50% 50%;
+	box-shadow: 5px 5px 10px gray;
+	transition: background-color 1s linear 3s;
+}
+.cloud__body-1::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -35px;
+	left: 20%;
+	width: 85px;
+	height: 85px;
+	background-color: #fff;
+	border-radius: 50%;
+	transition: background-color 1s linear 3s;
+}
+.cloud__body-1::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -60px;
+	left: 45%;
+	width: 120px;
+	height: 120px;
+	background-color: #fff;
+	border-radius: 50%;
+	transition: background-color 1s linear 3s;
+}
+.cloud__text {
+	position: relative;
+	top: 55px;
+	left: 40%;
+	color: lightgrey;
+}
+.rain {
+	position: relative;
+	top: -10px;
+	left: 20%;
+	max-width: 230px;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 3s linear 1s;
+}
+.cloud__container-1:hover .cloud__body-1 {
+	background-color: lightsteelblue;
+}
+.cloud__container-1:hover .cloud__body-1::before {
+	background-color: lightsteelblue;
+}
+.cloud__container-1:hover .cloud__body-1::after {
+	background-color: lightsteelblue;
+}
+.cloud__container-1:hover .rain {
+	visibility: visible;
+	opacity: 1;
+}
+.rain:hover .rain__item {
+	transform-origin: 50% 0;
+	transform: rotate3d(0.5, 0.5, 0.2, -45deg) translate3d(10px, 10px, 5px);
+}
+.rain__item {
+	transition: 1.5s;
+}
+.rain__image {
+	width: 20px;
+	height: 40px;
+}
+.rain__item--1 {
+	position: absolute;
+	top: 20px;
+	left: 0;
+}
+.rain__item--2 {
+	position: absolute;
+	top: 20px;
+	left: 55px;
+}
+.rain__item--3 {
+	position: absolute;
+	top: 20px;
+	left: 110px;
+}
+.rain__item--4 {
+	position: absolute;
+	top: 20px;
+	left: 165px;
+}
+.rain__item--5 {
+	position: absolute;
+	top: 65px;
+	left: 30px;
+}
+.rain__item--6 {
+	position: absolute;
+	top: 65px;
+	left: 85px;
+}
+.rain__item--7 {
+	position: absolute;
+	top: 65px;
+	left: 140px;
+}
+.cloud__body-2 {
+	width: 200px;
+	height: 75px;
+	background-color: #fff;
+	border-radius: 24% 17% 22% 22% / 50% 50% 50% 50%;
+	box-shadow: 5px 5px 10px gray;
+}
+.cloud__body-2::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -35px;
+	left: 18%;
+	width: 65px;
+	height: 65px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.cloud__body-2::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -50px;
+	left: 45%;
+	width: 75px;
+	height: 75px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.cloud__body-3 {
+	width: 150px;
+	height: 50px;
+	background-color: #fff;
+	border-radius: 24% 17% 22% 22% / 50% 50% 50% 50%;
+	box-shadow: 5px 5px 10px gray;
+}
+.cloud__body-3::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -20px;
+	left: 20%;
+	width: 40px;
+	height: 40px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.cloud__body-3::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -30px;
+	left: 43%;
+	width: 65px;
+	height: 65px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.cloud__container-1:hover {
+	animation-play-state: paused;
+}
+.cloud__container-1,
+.cloud__container-2,
+.cloud__container-3 {
+	animation-name: translate-clouds;
+	animation-duration: 20s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@keyframes translate-clouds {
+	0% {
+		transform: translate(0, 0);
+	}
+	20% {
+		transform: translate(-50px, 15px);
+	}
+	60% {
+		transform: translate(75px, -5px);
+	}
+	100% {
+		transform: translate(250px, 20px);
+	}
+}
+.sun {
+	position: absolute;
+	top: 40px;
+	left: 25%;
+	display: block;
+	max-width: 200px;
+	max-height: 200px;
+	transition: 1.5s;
+	animation-name: rotate-sun;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation: move-sun 4s ease-in-out 8s 1 forwards;
+}
+@keyframes rotate-sun {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes move-sun {
+	0% {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translate(100px, 400px);
+	}
+	100% {
+		transform: translate(200px, 1000px);
+	}
+}
+.sun__image {
+	width: 100%;
+}
+.night {
+	width: 500px;
+	height: 400px;
+	position: relative;
+	top: 0;
+	left: 100px;
+	border-top: 3px solid #fff;
+	opacity: 0;
+	animation: translate-night 5s ease-in-out 12s 1 forwards;
+}
+.night__star-1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 120px;
+	height: 240px;
+	transform-origin: top;
+	animation: night 3s infinite ease-in-out 16s alternate;
+}
+.night__star-1::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 49%;
+	width: 2px;
+	height: 190px;
+	background-color: #fff;
+}
+.night__star-1::after {
+	content: "";
+	width: 120px;
+	height: 70px;
+	background: url('../img/star.png') no-repeat center bottom / 70px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.night__star-2 {
+	position: absolute;
+	top: 0;
+	left: 120px;
+	width: 120px;
+	height: 160px;
+	transform-origin: top;
+	animation: night 2.5s infinite ease-in-out 16s alternate;
+}
+.night__star-2::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 49%;
+	width: 2px;
+	height: 110px;
+	background-color: #fff;
+}
+.night__star-2::after {
+	content: "";
+	width: 120px;
+	height: 70px;
+	background: url('../img/star.png') no-repeat center bottom / 70px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.night__moon {
+	position: absolute;
+	top: 0;
+	left: 240px;
+	width: 140px;
+	height: 370px;
+	transform-origin: top;
+	animation: night 2.8s infinite ease-in-out 16s alternate;
+}
+.night__moon::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 49%;
+	width: 2px;
+	height: 280px;
+	background-color: #fff;
+}
+.night__moon::after {
+	content: "";
+	width: 120px;
+	height: 100px;
+	background: url('../img/moon.png') no-repeat center bottom / 100px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.night__star-3 {
+	position: absolute;
+	top: 0;
+	left: 380px;
+	width: 120px;
+	height: 300px;
+	transform-origin: top;
+	animation: night 3.2s infinite ease-in-out 16s alternate;
+}
+.night__star-3::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 49%;
+	width: 2px;
+	height: 250px;
+	background-color: #fff;
+}
+.night__star-3::after {
+	content: "";
+	width: 120px;
+	height: 70px;
+	background: url('../img/star.png') no-repeat center bottom / 70px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+@keyframes night {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(10deg);
+	}
+	100% {
+		transform: rotate(-10deg);
+	}
+}
+@keyframes translate-night {
+	0% {
+		transform: translate(100px, -500px);
+	}
+	100% {
+		transform: translate(100px, 0);
+		opacity: 1;
+	}
+}
+.car {
+	position: absolute;
+	top: 425px;
+	left: 15%;
+}
+.car__container {
+	max-width: 400px;
+	max-height: 250px;
+	transition: 0.5s;
+	animation: car-move 7s linear 1s 1 forwards;
+	transform-origin: 50% 0;
+}
+@keyframes car-move {
+	0% {
+		transform: translate(0, 0) rotate(0deg);
+	}
+	30% {
+		transform: translate(70%, 20%) rotate(15deg);
+	}
+	50% {
+		transform: translate(95%, 30%) rotate(0deg);
+	}
+	80% {
+		transform: translate(160%, 25%) rotate(-18deg);
+	}
+	100% {
+		transform: translate(255%, -8%) rotate(0deg);
+	}
+}
+/* .car__container:hover {
+	transform-origin: 50% 0;
+	transform: translate(70%, 20%) rotate(15deg);
+} */
+.car__roof {
+	position: relative;
+	top: 0;
+	left: 55px;
+	width: 200px;
+	height: 90px;
+	border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+	background-color: rgb(76, 39, 238);
+}
+.car__window {
+	width: 75px;
+	height: 60px;
+	border: 1px solid lightgrey;
+}
+.car__window--rear {
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%;
+	background-color: rgb(17, 235, 250);
+}
+.car__window--front {
+	position: absolute;
+	top: 15px;
+	left: 105px;
+	border-radius: 0% 100% 100% 0% / 100% 100% 0% 0%;
+	background-color: rgb(17, 235, 250);
+}
+.car__block-window {
+	transform-style: preserve-3d;
+	perspective: 400px;
+	perspective-origin: 40% 60%;
+}
+.car__small-window {
+	position: absolute;
+	top: 23px;
+	left: 133px;
+	width: 45px;
+	height: 51px;
+	border-radius: 0% 100% 100% 0% / 4% 100% 0% 96%;
+	background-color: rgb(57, 139, 247);
+	border: 1px solid lightgrey;
+	/* z-index: 2; */
+}
+.car__small-window--inside {
+	position: absolute;
+	top: 23px;
+	left: 133px;
+	width: 45px;
+	height: 51px;
+	border-radius: 0% 100% 100% 0% / 4% 100% 0% 96%;
+	background-color:rgba(211, 211, 211, 0.803);
+}
+.car__small-window--outside {
+	transition: 0.7s;
+	/* z-index: 2; */
+}
+.car__block-window:hover .car__small-window--outside {
+	transform: rotateY(-45deg);
+}
+.car__block-window:active .car__small-window--outside {
+	transform: rotateY(-135deg);
+	backface-visibility: hidden;
+}
+
+/* Почему при следующей записи псевдоэлемент оказывается над объектом (по оси Z) и никакой z-index не помогает? Пришлось отказаться от ::before и создать блок в html.
+В предыдущих домашках сталкивалась с тем, что псевдокласс приоритетнее просто класса в CSS, сейчас причина в этом? Как выходить из ситуации в дальнейшем? */
+
+/* .car__small-window::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 45px;
+	height: 51px;
+	border-radius: 0% 100% 100% 0% / 4% 100% 0% 96%;
+	background-color:lightgray;
+} */
+.car__body {
+	position: relative;
+	top: -10px;
+	left: 0;
+	width: 325px;
+	height: 90px;
+	border-radius: 18% 25% 10% 10% / 100% 97% 0% 0%;
+	background-color: rgb(76, 39, 238);
+}
+.car__knob {
+	width: 25px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: rgb(126, 15, 191);
+	border: 1px solid black;
+}
+.car__knob--rear {
+	position: absolute;
+	top: 10px;
+	left: 78px;
+}
+.car__knob--front {
+	position: absolute;
+	top: 10px;
+	left: 163px;
+}
+.car__headlight {
+	position: absolute;
+	top: 42px;
+	right: 20px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color:goldenrod;
+}
+.car__bottom {
+	position: relative;
+	top: 0;
+	left: -15px;
+}
+.car__bumper {
+	width: 70px;
+	height: 20px;
+	border-radius: 16% 16% 16% 16% / 50% 50% 50% 50%;
+	background-color: darkorchid;
+}
+.car__bumper--rear {
+	position: absolute;
+	top: -20px;
+	left: 0;
+}
+.car__bumper--front {
+	position: absolute;
+	top: -20px;
+	left: 285px;
+}
+.car__wheel {
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	background-color: rgb(25, 25, 25);
+	outline: 2px dashed rgb(25, 25, 25);
+	animation: wheel-rotate 3.5s linear 1s 2;
+}
+@keyframes wheel-rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.car__wheel--rear {
+	position: absolute;
+	top: -45px;
+	left: 50px;
+}
+.wheel {
+}
+.wheel__center {
+	position: absolute;
+	top: 33%;
+	left: 33%;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: gold;
+}
+.car__wheel--front {
+	position: absolute;
+	top: -45px;
+	left: 220px;
+}
