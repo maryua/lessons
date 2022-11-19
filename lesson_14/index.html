@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson_14</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<span class="header__text">I'm header</span>
+			</div>
+		</header>
+		<main class="main">
+			<div class="main__container">
+				<h1 class="first-title">Flexbox</h1>
+				<h2 class="title">Властивості FLEX-контейнера</h2>
+				<h3 class="sub-title">display: flex</h3>
+				<div class="example example--flex">
+					<div class="example__item">1</div>
+					<div class="example__item">2</div>
+					<div class="example__item">3</div>
+					<div class="example__item">4</div>
+				</div>
+				<h3 class="sub-title">display: inline-flex</h3>
+				<div class="example example--inline-flex">
+					<div class="example__item">1</div>
+					<div class="example__item">2</div>
+					<div class="example__item">3</div>
+					<div class="example__item">4</div>
+				</div>
+				<h3 class="sub-title">flex-wrap: no-wrap (за замовченням)</h3>
+				<div class="example example--no-wrap">
+				<div class="example__item">10000</div>
+				<div class="example__item">200</div>
+				<div class="example__item">300</div>
+				<div class="example__item">400</div>
+				<div class="example__item">500</div>
+				<div class="example__item">600</div>
+				<div class="example__item">700</div>
+				<div class="example__item">800</div>
+			</div>
+			<h3 class="sub-title">flex-wrap: wrap</h3>
+			<div class="example example--wrap">
+				<div class="example__item">10000</div>
+				<div class="example__item">200</div>
+				<div class="example__item">300</div>
+				<div class="example__item">400</div>
+				<div class="example__item">500</div>
+				<div class="example__item">600</div>
+				<div class="example__item">700</div>
+				<div class="example__item">800</div>
+			</div>
+			<h3 class="sub-title">flex-wrap: wrap-reverse</h3>
+			<div class="example example--wrap-reverse">
+				<div class="example__item">10000</div>
+				<div class="example__item">200</div>
+				<div class="example__item">300</div>
+				<div class="example__item">400</div>
+				<div class="example__item">500</div>
+				<div class="example__item">600</div>
+				<div class="example__item">700</div>
+				<div class="example__item">800</div>
+			</div>
+			<h3 class="sub-title">flex-direction: row (за замовченням)</h3>
+			<div class="example example--row">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">flex-direction: row-reverse</h3>
+			<div class="example example--row-reverse">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">flex-direction: column</h3>
+			<div class="example example--column">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">flex-direction: column-reverse</h3>
+			<div class="example example--column-reverse">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">justify-content: flex-start (за замовченням)</h3>
+			<div class="example example--flex-start">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">justify-content: flex-end</h3>
+			<div class="example example--flex-end">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">justify-content: center</h3>
+			<div class="example example--center">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">justify-content: space-between</h3>
+			<div class="example example--space-between">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">justify-content: space-around</h3>
+			<div class="example example--space-around">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">justify-content: space-evenly</h3>
+			<div class="example example--space-evenly">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">align-items: strech (за замовченням)</h3>
+			<div class="example example--strech">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">align-items: flex-start</h3>
+			<div class="example example--start">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">align-items: flex-end</h3>
+			<div class="example example--end">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">align-items: center</h3>
+			<div class="example example--center-ai">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">align-items: baseline</h3>
+			<div class="example example--baseline">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">column-gap</h3>
+			<div class="example example--column-gap">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">row-gap</h3>
+			<div class="example example--row-gap">
+				<div class="example__item">10000</div>
+				<div class="example__item">200</div>
+				<div class="example__item">300</div>
+				<div class="example__item">400</div>
+				<div class="example__item">500</div>
+				<div class="example__item">600</div>
+				<div class="example__item">700</div>
+				<div class="example__item">800</div>
+			</div>
+			<h2 class="title">Властивості FLEX-елементів</h2>
+			<h3 class="sub-title">align-self: flex-start</h3>
+			<div class="example example--element-start">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">align-self: center</h3>
+			<div class="example example--element-center">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">align-self: flex-end</h3>
+			<div class="example example--element-end">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">flex-grow: 0 (за замовченням)</h3>
+			<div class="example example--grow-0">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">flex-grow: 1</h3>
+			<div class="example example--grow-1">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">flex-shrink: 1 (за замовченням)</h3>
+			<div class="example example--shrink-1">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">flex-shrink: 0</h3>
+			<div class="example example--shrink-0">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">flex-basis: auto (за замовченням)</h3>
+			<div class="example example--basis-auto">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">flex-basis: значення (у px або у %)</h3>
+			<div class="example example--basis-percent">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h3 class="sub-title">order</h3>
+			<div class="example example--order">
+				<div class="example__item">1</div>
+				<div class="example__item">2</div>
+				<div class="example__item">3</div>
+				<div class="example__item">4</div>
+			</div>
+			<h2 class="title">Приклад з відступами</h2>
+			<div class="example example--margin">
+				<div class="example__item">
+					<div class="example__content">Колонка 1</div>
+				</div>
+				<div class="example__item">
+					<div class="example__content">Колонка 2</div>
+				</div>
+				<div class="example__item">
+					<div class="example__content">Колонка 3</div>
+				</div>
+				<div class="example__item">
+					<div class="example__content">Колонка 4</div>
+				</div>
+			</div>
+			<h2 class="title">Приклад з текстом</h2>
+			<div class="text-block">
+				<h4 class="text-block__title">I'm title</h4>
+				<a href="#" class="text-block__link">I'm link</a>
+				<div class="text-block__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat est aut quisquam voluptatem, dicta pariatur tenetur magnam, fugiat, non sapiente laboriosam vitae beatae. Repellat harum est tenetur, dolores soluta aliquam?
+				Est facere optio perferendis cupiditate doloremque excepturi cum, odit reprehenderit architecto atque consequatur hic obcaecati ratione reiciendis mollitia quidem recusandae? Harum illum vel minima eum facilis similique nobis ea rem.</div>
+			</div>
+			<h2 class="title">Приклад з картками</h2>
+			<div class="cards">
+				<div class="cards__column">
+					<div class="cards__item">
+						<div class="cards__img">
+							<img src="img/inzhir.jpg" alt="Фото інжиру з лавандою">
+						</div>
+						<div class="cards__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat est aut quisquam voluptatem, dicta pariatur tenetur magnam, fugiat, non sapiente laboriosam vitae beatae. Repellat harum est tenetur, dolores soluta aliquam?
+							</div>
+						<a href="#" class="cards__button">Button</a>
+					</div>
+				</div>
+				<div class="cards__column">
+					<div class="cards__item">
+						<div class="cards__img">
+							<img src="img/inzhir.jpg" alt="Фото інжиру з лавандою">
+						</div>
+						<div class="cards__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat est aut quisquam voluptatem, dicta pariatur tenetur magnam, fugiat, non sapiente laboriosam vitae beatae. Repellat harum est tenetur, dolores soluta aliquam?
+							Est facere optio perferendis cupiditate doloremque excepturi cum, odit reprehenderit architecto atque consequatur hic obcaecati ratione reiciendis mollitia quidem recusandae? Harum illum vel minima eum facilis similique nobis ea rem.</div>
+						<a href="#" class="cards__button">Button</a>
+					</div>
+				</div>
+				<div class="cards__column">
+					<div class="cards__item">
+						<div class="cards__img">
+							<img src="img/inzhir.jpg" alt="Фото інжиру з лавандою">
+						</div>
+						<div class="cards__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat est aut quisquam voluptatem, dicta pariatur tenetur magnam, fugiat, non sapiente laboriosam vitae beatae. Repellat harum est tenetur, dolores soluta aliquam?
+							Est facere optio perferendis cupiditate doloremque excepturi cum, odit reprehenderit architecto atque consequatur hic obcaecati ratione reiciendis mollitia quidem recusandae?</div>
+						<a href="#" class="cards__button">Button</a>
+					</div>
+				</div>
+			</div>
+			<h2 class="title">Приклад з текстом та псевдоелементом</h2>
+			<div class="text-before">
+				<a href="#" class="text-before__link">
+					I'm link</a>
+			</div>
+			<h2 class="title">Приклад з width</h2>
+			<div class="width-example">
+				<div class="width-example__block">
+					<div class="width-example__icon"></div>
+					<div class="width-example__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat est aut quisquam voluptatem, dicta pariatur tenetur magnam, fugiat, non sapiente laboriosam vitae beatae. Repellat harum est tenetur, dolores soluta aliquam?
+						Est facere optio perferendis cupiditate doloremque excepturi cum, odit reprehenderit architecto atque consequatur hic obcaecati ratione reiciendis mollitia quidem recusandae?</div>
+				</div>
+			</div>
+			<h2 class="title">Приклад з float</h2>
+			<div class="example-float">
+				<img src="img/inzhir.jpg" alt="Фото інжиру з лавандою" class="example-float__img">
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat est aut quisquam voluptatem, dicta pariatur tenetur magnam, fugiat, non sapiente laboriosam vitae beatae. Repellat harum est tenetur, dolores soluta aliquam?
+				Est facere optio perferendis cupiditate doloremque excepturi cum, odit reprehenderit architecto atque consequatur hic obcaecati ratione reiciendis mollitia quidem recusandae? Harum illum vel minima eum facilis similique nobis ea rem. Est facere optio perferendis cupiditate doloremque excepturi cum, odit reprehenderit architecto atque consequatur hic obcaecati ratione reiciendis mollitia quidem recusandae? Harum illum vel minima eum facilis similique nobis ea rem.
+			</div>
+			<h2 class="title">Приклад з even</h2>
+			<div class="example-even">
+				<div class="example-even__item item">
+					<div class="item__img">
+						<img src="img/inzhir.jpg" alt="Фото інжиру з лавандою">
+					</div>
+					<div class="item__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat est aut quisquam voluptatem, dicta pariatur tenetur magnam, fugiat, non sapiente laboriosam vitae beatae. Repellat harum est tenetur, dolores soluta aliquam?
+							Est facere optio perferendis cupiditate doloremque excepturi cum, odit reprehenderit architecto atque consequatur hic obcaecati ratione reiciendis mollitia quidem recusandae? Harum illum vel minima eum facilis similique nobis ea rem.</div>
+				</div>
+				<div class="example-even__item item">
+					<div class="item__img">
+						<img src="img/inzhir.jpg" alt="Фото інжиру з лавандою">
+					</div>
+					<div class="item__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat est aut quisquam voluptatem, dicta pariatur tenetur magnam, fugiat, non sapiente laboriosam vitae beatae. Repellat harum est tenetur, dolores soluta aliquam?
+							Est facere optio perferendis cupiditate doloremque excepturi cum, odit reprehenderit architecto atque consequatur hic obcaecati ratione reiciendis mollitia quidem recusandae? Harum illum vel minima eum facilis similique nobis ea rem.</div>
+				</div>
+				<div class="example-even__item item">
+					<div class="item__img">
+						<img src="img/inzhir.jpg" alt="Фото інжиру з лавандою">
+					</div>
+					<div class="item__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat est aut quisquam voluptatem, dicta pariatur tenetur magnam, fugiat, non sapiente laboriosam vitae beatae. Repellat harum est tenetur, dolores soluta aliquam?
+							Est facere optio perferendis cupiditate doloremque excepturi cum, odit reprehenderit architecto atque consequatur hic obcaecati ratione reiciendis mollitia quidem recusandae? Harum illum vel minima eum facilis similique nobis ea rem.</div>
+				</div>
+				<div class="example-even__item item">
+					<div class="item__img">
+						<img src="img/inzhir.jpg" alt="Фото інжиру з лавандою">
+					</div>
+					<div class="item__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat est aut quisquam voluptatem, dicta pariatur tenetur magnam, fugiat, non sapiente laboriosam vitae beatae. Repellat harum est tenetur, dolores soluta aliquam?
+							Est facere optio perferendis cupiditate doloremque excepturi cum, odit reprehenderit architecto atque consequatur hic obcaecati ratione reiciendis mollitia quidem recusandae? Harum illum vel minima eum facilis similique nobis ea rem.</div>
+				</div>
+				<div class="example-even__item item">
+					<div class="item__img">
+						<img src="img/inzhir.jpg" alt="Фото інжиру з лавандою">
+					</div>
+					<div class="item__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat est aut quisquam voluptatem, dicta pariatur tenetur magnam, fugiat, non sapiente laboriosam vitae beatae. Repellat harum est tenetur, dolores soluta aliquam?
+							Est facere optio perferendis cupiditate doloremque excepturi cum, odit reprehenderit architecto atque consequatur hic obcaecati ratione reiciendis mollitia quidem recusandae? Harum illum vel minima eum facilis similique nobis ea rem.</div>
+				</div>
+			</div>
+		</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<span class="footer__text">I'm footer</span>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
