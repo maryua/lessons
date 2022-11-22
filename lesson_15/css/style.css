@@ -235,7 +235,7 @@ body {
 }
 .item-advantages__desc {
 }
-.item-advantages__circle {
+.advantages-main__circle {
 	flex: 0 0 8px;
 	height: 8px;
 	background-color: #FF3F3A;
