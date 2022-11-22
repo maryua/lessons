@@ -65,7 +65,7 @@ body {
 	background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%) 0 0 / 100%;
 	font-weight: 700;
 	color: #FFFFFF;
-	letter-spacing: 0.5;
+	letter-spacing: 0.5px;
 	padding: 13px 40px;
 	border-radius: 4px;
 	display: inline-block;
