@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson_16</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="#" class="header__logo">
+					<img src="img/logo.svg" alt="Logo">
+				</a>
+				<nav class="header__menu menu">
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a href="#" class="menu__link">About Us</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">Courses</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">Events</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">Blog</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">Contacts</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="header__actions actions-header">
+					<a href="#" class="actions-header__button button"><span>Get consultation</span></a>
+					<a href="#" class="actions-header__auth"><span>Log in / Register</span></a>
+				</div>
+			</div>
+		</header>
+		<main class="contacts">
+			<section class="contacts__questions questions-block">
+				<div class="questions-block__container">
+					<div class="questions-block__body body-questions">
+						<div class="body-questions__media">
+							<img src="img/contacts/illustration.svg" alt="Picture of consultant" class="body-questions__img">
+						</div>
+						<div class="body-questions__content">
+							<span class="body-questions__pre-title pre-title">Any questions?</span>	
+							<h2 class="body-questions__title title">Drop us a line</h2>	
+							<form action="https://jsonplaceholder.typicode.com/posts" class="body-questions__form form" method="post">
+								<div class="form__item">
+									<label for="name-01" class="form__label">First Name*</label>
+									<input id="name-01" type="text" class="form__input form__input--border" placeholder="Your first name" name="first-name" required>
+								</div>
+								<div class="form__item">
+									<label for="name-02" class="form__label">Last  Name*</label>
+									<input id="name-02" type="text" class="form__input form__input--border" placeholder="Your last name" name="last-name" required>
+								</div>
+								<div class="form__item">
+									<label for="" class="form__label">Email*</label>
+									<input id="" type="email" class="form__input form__input--border" placeholder="Your working email" name="email" required>
+								</div>
+								<div class="form__item">
+									<label for="" class="form__label">Phone</label>
+									<input id="" type="tel" class="form__input form__input--border" placeholder="Your phone number" name="phone" autocomplete="off">
+								</div>
+								<div class="form__item form__item--message">
+									<label for="" class="form__label form__label--message">Message*</label>
+									<textarea id="" type="text" class="form__area form__area--border" placeholder="Your message" autocomplete="off" required></textarea>
+								</div>
+								<div class="form__item item-age">
+									<div class="item-age__title">Age*</div>
+									<div class="item-age__block">
+										<input id="age-01" type="radio" class="item-age__input" required name="age" value="-18">
+										<label for="age-01" class="item-age__label">-18</label>
+									</div>
+									<div class="item-age__block">
+										<input id="age-02" type="radio" class="item-age__input" required name="age" value="18-30">
+										<label for="age-02" class="item-age__label">18-30</label>
+									</div>
+									<div class="item-age__block">
+										<input id="age-03" type="radio" class="item-age__input" required name="age" value="30-50">
+										<label for="age-03" class="item-age__label">30-50</label>
+									</div>
+									<div class="item-age__block">
+										<input id="age-04" type="radio" class="item-age__input" required name="age" value="50+">
+										<label for="age-04" class="item-age__label">50+</label>
+									</div>
+								</div>
+								<div class="form__item checkbox">
+									<input id="agree-communications" type="checkbox" class="checkbox__input" required checked name="agree">
+									<label for="agree-communications" class="checkbox__label"><span class="checkbox__text">I agree to receive communications from Createx Online School</span></label>
+								</div>
+								<div class="form__item">
+									<button type="submit" class="form__button button"><span>Send message</span></button>
+								</div>	
+							</form>
+						</div>
+					</div> 
+				</div>
+			</section>
+			<section class="experiments">
+				<div class="experiments__container">
+					<h2 class="experiments__title title">My experiments</h2>
+					<form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="experiments__form form-exp">
+						<div class="form-exp__line">
+							<label for="name-exp" class="form-exp__label">Enter your name</label>
+							<input id="name-exp" type="text" name="name" placeholder="Name" autocomplete="off" required class="form-exp__input">
+						</div>
+						<div class="form-exp__line">
+							<label for="pass-exp" class="form-exp__label">Enter your password</label>
+							<input id="pass-exp" type="password" name="pass" placeholder="Password" autocomplete="off" required class="form-exp__input">
+						</div>
+						<div class="form-exp__line">
+							<label for="age-exp" class="form-exp__label">Enter your age</label>
+							<input id="age-exp" type="text" name="age" placeholder="Age" autocomplete="off" class="form-exp__input">
+						</div>
+						<div class="form-exp__line">
+							<div class="form-exp__title">Your favourite color</div>
+							<select name="color " id="select-color" multiple class="list">
+								<option value="Green">Green</option>
+								<option value="Blue">Blue</option>
+								<option value="Yellow">Yellow</option>
+								<option value="Red">Red</option>
+								<option value="Orange">Orange</option>
+							</select>
+						</div>
+						<div class="form-exp__line">
+							<input class="form-exp__input" name="token" value="something hidden" type="hidden">
+						</div>
+						<div class="form__line">
+							<input class="form-exp__input" autocomplete="off" placeholder="Enter the number" name="digit" type="number">
+						</div>
+						<div class="form-exp__line">
+							<input class="form-exp__input" autocomplete="off" name="color" value="#FF3F3A" type="color">
+						</div>
+						<div class="form-exp__line">
+							<input class="form-exp__input" autocomplete="off" name="search" placeholder="Your searching request" type="search">
+						</div>
+						<div class="form-exp__line">
+							<input class="form-exp__input" autocomplete="off" name="date" type="date">
+						</div>
+						<div class="form-exp__line">
+							<input class="form-exp__input" autocomplete="off" name="range" type="range">
+						</div>
+						<div class="form-exp__line">
+							<input class="form-exp__input" name="file" accept="image/png, image/jpeg" multiple type="file">
+						</div>
+						<div class="form-exp__line">
+							<button type="reset" class="form__button button"><span>Reset</span></button>
+						</div>
+						<div class="form-exp__line">
+							<button type="submit" class="form__button button"><span>Submit</span></button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer class="footer"></footer>
+	</div>
+</body>
+</html>
